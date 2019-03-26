@@ -1,18 +1,10 @@
-import React, { Component } from 'React';
+import React, { Component } from 'react';
 
 class Gif extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
   render() {
+    const src = `https://media3.giphy.com/media/${this.props.id}/200.gif`;
     return (
-      <div>
-
-      </div>
+      <img src={src} alt="" className="gif" />
     );
   }
 }

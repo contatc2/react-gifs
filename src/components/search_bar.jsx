@@ -1,19 +1,17 @@
-import React, { Component } from 'React';
+import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
+  handleUpdate = (event) => {
+    this.props.search(event.target.value);
   }
 
   render() {
     return (
-      <div>
-        <div className="left-scene"></div>
-        <div className="right-scene"></div>
-      </div>
+      <input
+        type="text"
+        className="form-control form-search"
+        onChange={this.handleUpdate}
+      />
     );
   }
 }
