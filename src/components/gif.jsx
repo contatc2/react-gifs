@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
+  shouldComponentUpdate(nextProps) {
+    const { id } = this.props;
+    return nextProps.id !== id;
+  }
+
   handleClick = () => {
     const { id } = this.props;
     const { selectGif } = this.props;
@@ -8,6 +13,7 @@ class Gif extends Component {
       selectGif(id);
     }
   }
+
 
   render() {
     const { id } = this.props;
